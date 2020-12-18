@@ -66,5 +66,28 @@
 - 최댓값 = -34.06244803 / 최솟값 = 0.000333045
 - model score: train set 1.0 / test set 0.497365778760118
 
+#### Ⅲ. 라쏘 회귀 분석 Lasso Regression Analysis
+- 라쏘 회귀는 유의미하지 않은 변수들에 대해 계수를 0에 가깝게 추정하여 변수를 스스로 선택한다. 이를 통해 과대적합을 피하는 일반적인 모델을 만들 수 있다.
+![image](https://user-images.githubusercontent.com/50713190/102587765-c21f8700-414f-11eb-9fb3-2dd10a8c5b9d.png)
 
-ⅢⅣⅤ
+- 라쏘는 위의 식에서 MSE와 penalty의 합이 최소가 되게 하는 파라미터 α를 찾는 것이 목적이다. 
+- Default 라쏘 모델에 대한 Relative Error
+![image](https://user-images.githubusercontent.com/50713190/102590212-91d9e780-4153-11eb-874b-fdfabfee1f87.png)
+- 최댓값 = -220.554 / 최솟값 = 0.002466
+
+- α = 1, max_iter = 1000일 때 (Default)
+![image](https://user-images.githubusercontent.com/50713190/102589359-407d2880-4152-11eb-94f1-338c09291777.png)
+
+- α = 0.1, max_iter = 100000일 때
+![image](https://user-images.githubusercontent.com/50713190/102589435-5a1e7000-4152-11eb-90f4-913835c8455a.png)
+
+ - α = 0.001, max_iter = 100000일 때
+ ![image](https://user-images.githubusercontent.com/50713190/102589491-6dc9d680-4152-11eb-9295-3850e8a59adf.png)
+
+- α = 0.0001, max_iter = 100000일 때
+![image](https://user-images.githubusercontent.com/50713190/102589531-7a4e2f00-4152-11eb-8e53-fb801008004b.png)
+
+- α의 값이 점점 작아질수록 사용하는 feature의 수가 늘어남과 동시에 train set의 점수는 높아지는 반면, test set의 점수는 점차 감소함을 볼 수 있다. 즉, α의 값이 점점 작아질수록 과적합 문제가 발생하고 있다고 볼 수 있다.
+ 
+![image](https://user-images.githubusercontent.com/50713190/102589746-c6996f00-4152-11eb-9438-8ae895deca1c.png)
+- 위 그림에서 볼 수 있듯이 모두 0 근처에 모여 있다는 것은 α의 값과 거의 무관하게 계수 대부분이 0의 값을 가지며 나머지 계수들의 크기도 작다는 것을 알 수 있다. 모형이 0에서 멀어질수록 
