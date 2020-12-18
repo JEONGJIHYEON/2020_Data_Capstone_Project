@@ -42,7 +42,16 @@
 - 상관 계수 R = 0.02404548906383753. 결정 계수 R²의 값이 클수록 모델의 예측력이 높다. 즉, 이 모델은 뭐로 보나 예측력이 높다고 할 수 없다.
 - Relative Error (상대 오차)
 ![image](https://user-images.githubusercontent.com/50713190/102581360-bfb73000-4143-11eb-8082-335735c16772.png)
-- 최대값 = -215.977 / 최소값 = 0.000758
+- 최댓값 = -184.984 / 최솟값 = 0.001887
+- model score: train set 0.9059856606025053 / test set 0.694154206656521
+
+#### Ⅱ. 회귀 나무 분석 Regression Tree Analysis
+- 위에서와 같이 1301개의 데이터를 train set과 test set으로 나누어 회귀 나무 분석을 진행했다. 이때, train set과 test set의 비율은 7:3으로 train set은 총 910개, test set은 총 391개이다.
+- RMSE (평균 제곱근 오차) = 12069647783.79031
+- Relative Error (상대 오차)
+![image](https://user-images.githubusercontent.com/50713190/102582465-00b04400-4146-11eb-9d8d-05b820934ca2.png)
+- 최댓값 = -34.06244803 / 최솟값 = 0.000333045
+- model score: train set 1.0 / test set 0.497365778760118
 
 
-ⅡⅢⅣⅤ
+ⅢⅣⅤ
