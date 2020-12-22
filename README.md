@@ -114,5 +114,5 @@
 
 -----------------------------------------------------
 ## REPOSITORY GUIDE
-- code: data_preprocess.R (데이터 전처리 파일), multiple_regression.ipynb(다중 회귀), regression_tree(회귀 나무), Lasso_regression.ipynb(랏쏘 회귀) (K-means Clustering 실제로 분석에 사용되진 않았으므로 제외)
+- code: data_preprocess.R (데이터 전처리 파일), multiple_regression.ipynb(다중 회귀), regression_tree.ipynb(회귀 나무), Lasso_regression.ipynb(랏쏘 회귀) (K-means Clustering는 실제로 분석에 사용되진 않았으므로 제외)
 - 데이터 파일의 경우 제한 용량인 10MB를 넘기는 경우가 발생하여 업로드하지 않았으며, 웹 사이트 (서울 열린 데이터 광장)에서 다운로드할 수 있다.
